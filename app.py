@@ -125,7 +125,7 @@ def ai_chatbot_tab():
 
     for q, r in reversed(st.session_state.chat_history[-5:]):
         st.markdown(f"**You:** {q}")
-        st.markdown(f"**AI:** {r}")
+        st.markdown(f"**AI Chatbot:** {r}")
 
 # Dashboard
 def show_dashboard():
