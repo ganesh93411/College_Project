@@ -8,6 +8,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 from sklearn.metrics import classification_report, confusion_matrix, roc_auc_score, roc_curve, accuracy_score, precision_score, recall_score, f1_score
 
@@ -175,7 +176,8 @@ def show_dashboard():
             models = {
                 "Logistic Regression": LogisticRegression(max_iter=1000),
                 "Random Forest": RandomForestClassifier(n_estimators=100),
-                "SVM": SVC(probability=True)
+                "SVM": SVC(probability=True),
+                "KNN": KNeighborsClassifier(n_neighbors=5)
             }
             st.session_state['model_results'] = {}
             for name, model in models.items():
